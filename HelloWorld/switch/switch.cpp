@@ -9,6 +9,7 @@ int main()
     bool needCalculation = true;
     cout << "Введите через пробел первое число, операцию, второе число: ";
     cin >> a >> operation >> b;
+
     switch (operation)
     {
     case '+':

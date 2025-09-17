@@ -3,7 +3,6 @@ using namespace std;
 
 int main()
 {
-	// bx+c=0  2x-5=0
 	setlocale(LC_ALL, ""); // Включаем русский в консоли
 	double b; // коэф. b
 	double c; // коэф. c
