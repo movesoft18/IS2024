@@ -42,9 +42,7 @@ int main()
     std::cout << "Введите 2-е число: ";
     std::cin >> b;
     sum(9, 4);
-    int result = sum(5, 7);
+    int result = 6 + sum(5, 7) * 10;
     printResult(a, b, result);
-
     //int result1 = sum(result, 70);
-
 }
