@@ -1,23 +1,25 @@
 ﻿#include <iostream>
 using namespace std;
 
-int x, int y;
-/*
-void sum()
+int x, y;
+
+int sum(int, int);
+void printResult(int, int, int);
+
+int main()
 {
-    double a, b, c;
+    setlocale(LC_ALL, "");
+    double a, b;
     std::cout << "Программа сложения двух чисел.\n";
     std::cout << "Введите 1-е число: ";
     std::cin >> a;
     std::cout << "Введите 2-е число: ";
     std::cin >> b;
-    if (a < 0 || b < 0)
-        return;
-    c = a + b;
-    std::cout << a << " + " << b << " = " << c << "\n";
-    return;
+    //sum(9, 4);
+    int result = 6 + sum(5, 7) * 10;
+    printResult(a, b, result);
+    //int result1 = sum(result, 70);
 }
-*/
 
 int sum(int a, int b)
 {
@@ -30,19 +32,4 @@ void printResult(int a, int b, int result)
 {
     std::cout << a << " + " << b << " = "
         << result << "\n";
-}
-
-int main()
-{
-    setlocale(LC_ALL, "");
-    double a, b;
-    std::cout << "Программа сложения двух чисел.\n";
-    std::cout << "Введите 1-е число: ";
-    std::cin >> a;
-    std::cout << "Введите 2-е число: ";
-    std::cin >> b;
-    sum(9, 4);
-    int result = 6 + sum(5, 7) * 10;
-    printResult(a, b, result);
-    //int result1 = sum(result, 70);
 }
