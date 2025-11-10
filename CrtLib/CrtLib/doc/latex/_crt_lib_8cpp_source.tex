@@ -1,0 +1,61 @@
+\doxysection{Crt\+Lib.\+cpp}
+\hypertarget{_crt_lib_8cpp_source}{}\label{_crt_lib_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_crt_lib_8h}{CrtLib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}windows.h"{}}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00004}\mbox{\hyperlink{namespacecrt}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecrt}{crt}}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00006}00006\ \ \ \ \ HANDLE\ hStdOut\ =\ GetStdHandle(STD\_OUTPUT\_HANDLE);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00008}\mbox{\hyperlink{namespacecrt_a192e4c98d198f9ffefabe48112464817}{00008}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecrt_a192e4c98d198f9ffefabe48112464817}{GotoXY}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ COORD\ cursorPosition\{x,y\};}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cursorPosition.X\ =\ x;}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{//cursorPosition.Y\ =\ y;}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ SetConsoleCursorPosition(hStdOut,\ cursorPosition);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00016}\mbox{\hyperlink{namespacecrt_af5fe6c868c744403bf635b5afb4c91ad}{00016}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecrt_af5fe6c868c744403bf635b5afb4c91ad}{SetTextColor}}(\textcolor{keywordtype}{int}\ color)}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ CONSOLE\_SCREEN\_BUFFER\_INFO\ info;}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ color\ =\ color\ \&\ 0b0000000000001111;\ \textcolor{comment}{//0x0f}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ GetConsoleScreenBufferInfo(hStdOut,\ \&info);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ info.wAttributes\ =\ info.wAttributes\ \&\ 0xf0;\ \textcolor{comment}{//0000000011110000}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ info.wAttributes\ =\ info.wAttributes\ |\ color;}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ SetConsoleTextAttribute(hStdOut,\ info.wAttributes);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00026}\mbox{\hyperlink{namespacecrt_a49596069d40f262da31e24c926a3ef89}{00026}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecrt_a49596069d40f262da31e24c926a3ef89}{SetTextBackground}}(\textcolor{keywordtype}{int}\ color)}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ CONSOLE\_SCREEN\_BUFFER\_INFO\ info;}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ color\ =\ color\ \&\ 0b0000000000001111;\ \textcolor{comment}{//0x0f}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ GetConsoleScreenBufferInfo(hStdOut,\ \&info);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ info.wAttributes\ =\ info.wAttributes\ \&\ 0x0f;\ \textcolor{comment}{//0000000000001111}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ color\ =\ color\ <<\ 4;\ \textcolor{comment}{//\ 00001111\ -\/\ >\ 11110000}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ info.wAttributes\ =\ info.wAttributes\ |\ color;}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ SetConsoleTextAttribute(hStdOut,\ info.wAttributes);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00037}\mbox{\hyperlink{namespacecrt_a9aeed09bf314649dc6288af2d5e16205}{00037}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecrt_a9aeed09bf314649dc6288af2d5e16205}{SetCursorVisibility}}(\textcolor{keywordtype}{bool}\ visible)}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ CONSOLE\_CURSOR\_INFO\ info;}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ GetConsoleCursorInfo(hStdOut,\ \&info);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ info.bVisible\ =\ visible;}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ SetConsoleCursorInfo(hStdOut,\ \&info);}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00045}\mbox{\hyperlink{namespacecrt_a9105446a9bb6dfc1569d5ab9a4d0438e}{00045}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecrt_a9105446a9bb6dfc1569d5ab9a4d0438e}{HideCursor}}()}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacecrt_a9aeed09bf314649dc6288af2d5e16205}{SetCursorVisibility}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00050}\mbox{\hyperlink{namespacecrt_ad90ce63173f9f521c494debfbc0ab345}{00050}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespacecrt_ad90ce63173f9f521c494debfbc0ab345}{ShowCursor}}()}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00051}00051\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacecrt_a9aeed09bf314649dc6288af2d5e16205}{SetCursorVisibility}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_crt_lib_8cpp_source_l00056}00056\ }
+
+\end{DoxyCode}

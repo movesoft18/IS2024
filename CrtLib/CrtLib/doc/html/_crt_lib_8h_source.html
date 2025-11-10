@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CrtLib: Исходный файл CrtLib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">CrtLib
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_crt_lib_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CrtLib.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_crt_lib_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecrt.html">crt</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> COLOR_BLACK = 0;          </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacecrt.html#aeb6413e792ace826d084d4f24498e154">   18</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#aeb6413e792ace826d084d4f24498e154">COLOR_BLUE</a> = 1;           </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacecrt.html#a47dbfa37bc10b08ad45a6d6ab287b71f">   19</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a47dbfa37bc10b08ad45a6d6ab287b71f">COLOR_GREEN</a> = 2;          </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacecrt.html#aa9bafd6a85b290aa5a5da5f8f75dbcbb">   20</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#aa9bafd6a85b290aa5a5da5f8f75dbcbb">COLOR_CYAN</a> = 3;           </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacecrt.html#a6e7636388768a85f042ab58e3827ad3b">   21</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a6e7636388768a85f042ab58e3827ad3b">COLOR_RED</a> = 4;            </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespacecrt.html#a97c0a023fd182b3ece9152936ab9ba31">   22</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a97c0a023fd182b3ece9152936ab9ba31">COLOR_MAGENTA</a> = 5;        </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespacecrt.html#a8ffe9589ab7f05653ed2d58e49b55eba">   23</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a8ffe9589ab7f05653ed2d58e49b55eba">COLOR_BROWN</a> = 6;          </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespacecrt.html#af50727c396d4611bca375c1d1b8a9795">   24</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#af50727c396d4611bca375c1d1b8a9795">COLOR_GRAY</a> = 7;           </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacecrt.html#a18b855b4f3ce7c50532152db6de02a46">   25</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a18b855b4f3ce7c50532152db6de02a46">COLOR_DARK_GRAY</a> = 8;      </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespacecrt.html#a6bba991f5e57376e6f53828993ac0b5c">   26</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a6bba991f5e57376e6f53828993ac0b5c">COLOR_LIGHT_BLUE</a> = 9;     </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespacecrt.html#a1bb146824489e62fdf13124a06df9f17">   27</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a1bb146824489e62fdf13124a06df9f17">COLOR_LIGHT_GREEN</a> = 10;   </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespacecrt.html#a1d4c29c7bd0309f7933f87c98431e101">   28</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a1d4c29c7bd0309f7933f87c98431e101">COLOR_LIGHT_CYAN</a> = 11;    </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespacecrt.html#aa942de6c9433ec3764db1e50095d8cad">   29</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#aa942de6c9433ec3764db1e50095d8cad">COLOR_LIGHT_RED</a> = 12;     </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespacecrt.html#a974f0aa0a916ef6ca78dda59172f05a8">   30</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a974f0aa0a916ef6ca78dda59172f05a8">COLOR_LIGHT_MAGENTA</a> = 13; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespacecrt.html#af6c747cc53b4550e2b50cc68983b9cc2">   31</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#af6c747cc53b4550e2b50cc68983b9cc2">COLOR_YELLOW</a> = 14;        </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespacecrt.html#a45f4fdaa13a65e7e4dad59cae86fe33e">   32</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacecrt.html#a45f4fdaa13a65e7e4dad59cae86fe33e">COLOR_WHITE</a> = 15;         </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>     </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecrt.html#a192e4c98d198f9ffefabe48112464817">GotoXY</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecrt.html#af5fe6c868c744403bf635b5afb4c91ad">SetTextColor</a>(<span class="keywordtype">int</span> color);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecrt.html#a49596069d40f262da31e24c926a3ef89">SetTextBackground</a>(<span class="keywordtype">int</span> color);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecrt.html#a9aeed09bf314649dc6288af2d5e16205">SetCursorVisibility</a>(<span class="keywordtype">bool</span> visible);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecrt.html#a9105446a9bb6dfc1569d5ab9a4d0438e">HideCursor</a>();  </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecrt.html#ad90ce63173f9f521c494debfbc0ab345">ShowCursor</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="ttc" id="anamespacecrt_html"><div class="ttname"><a href="namespacecrt.html">crt</a></div><div class="ttdoc">Все элементы объявлены в пространсве имен crt.</div><div class="ttdef"><b>Определения</b> <a href="_crt_lib_8cpp_source.html#l00004">CrtLib.cpp:5</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a18b855b4f3ce7c50532152db6de02a46"><div class="ttname"><a href="namespacecrt.html#a18b855b4f3ce7c50532152db6de02a46">crt::COLOR_DARK_GRAY</a></div><div class="ttdeci">constexpr int COLOR_DARK_GRAY</div><div class="ttdef"><b>Определения</b> <a href="#l00025">CrtLib.h:25</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a192e4c98d198f9ffefabe48112464817"><div class="ttname"><a href="namespacecrt.html#a192e4c98d198f9ffefabe48112464817">crt::GotoXY</a></div><div class="ttdeci">void GotoXY(int x, int y)</div><div class="ttdoc">Функция управления курсором</div><div class="ttdef"><b>Определения</b> <a href="_crt_lib_8cpp_source.html#l00008">CrtLib.cpp:8</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a1bb146824489e62fdf13124a06df9f17"><div class="ttname"><a href="namespacecrt.html#a1bb146824489e62fdf13124a06df9f17">crt::COLOR_LIGHT_GREEN</a></div><div class="ttdeci">constexpr int COLOR_LIGHT_GREEN</div><div class="ttdef"><b>Определения</b> <a href="#l00027">CrtLib.h:27</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a1d4c29c7bd0309f7933f87c98431e101"><div class="ttname"><a href="namespacecrt.html#a1d4c29c7bd0309f7933f87c98431e101">crt::COLOR_LIGHT_CYAN</a></div><div class="ttdeci">constexpr int COLOR_LIGHT_CYAN</div><div class="ttdef"><b>Определения</b> <a href="#l00028">CrtLib.h:28</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a45f4fdaa13a65e7e4dad59cae86fe33e"><div class="ttname"><a href="namespacecrt.html#a45f4fdaa13a65e7e4dad59cae86fe33e">crt::COLOR_WHITE</a></div><div class="ttdeci">constexpr int COLOR_WHITE</div><div class="ttdef"><b>Определения</b> <a href="#l00032">CrtLib.h:32</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a47dbfa37bc10b08ad45a6d6ab287b71f"><div class="ttname"><a href="namespacecrt.html#a47dbfa37bc10b08ad45a6d6ab287b71f">crt::COLOR_GREEN</a></div><div class="ttdeci">constexpr int COLOR_GREEN</div><div class="ttdef"><b>Определения</b> <a href="#l00019">CrtLib.h:19</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a49596069d40f262da31e24c926a3ef89"><div class="ttname"><a href="namespacecrt.html#a49596069d40f262da31e24c926a3ef89">crt::SetTextBackground</a></div><div class="ttdeci">void SetTextBackground(int color)</div><div class="ttdoc">Устанавливает цвет фона текста</div><div class="ttdef"><b>Определения</b> <a href="_crt_lib_8cpp_source.html#l00026">CrtLib.cpp:26</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a6bba991f5e57376e6f53828993ac0b5c"><div class="ttname"><a href="namespacecrt.html#a6bba991f5e57376e6f53828993ac0b5c">crt::COLOR_LIGHT_BLUE</a></div><div class="ttdeci">constexpr int COLOR_LIGHT_BLUE</div><div class="ttdef"><b>Определения</b> <a href="#l00026">CrtLib.h:26</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a6e7636388768a85f042ab58e3827ad3b"><div class="ttname"><a href="namespacecrt.html#a6e7636388768a85f042ab58e3827ad3b">crt::COLOR_RED</a></div><div class="ttdeci">constexpr int COLOR_RED</div><div class="ttdef"><b>Определения</b> <a href="#l00021">CrtLib.h:21</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a8ffe9589ab7f05653ed2d58e49b55eba"><div class="ttname"><a href="namespacecrt.html#a8ffe9589ab7f05653ed2d58e49b55eba">crt::COLOR_BROWN</a></div><div class="ttdeci">constexpr int COLOR_BROWN</div><div class="ttdef"><b>Определения</b> <a href="#l00023">CrtLib.h:23</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a9105446a9bb6dfc1569d5ab9a4d0438e"><div class="ttname"><a href="namespacecrt.html#a9105446a9bb6dfc1569d5ab9a4d0438e">crt::HideCursor</a></div><div class="ttdeci">void HideCursor()</div><div class="ttdoc">Делает курсор невидимым</div><div class="ttdef"><b>Определения</b> <a href="_crt_lib_8cpp_source.html#l00045">CrtLib.cpp:45</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a974f0aa0a916ef6ca78dda59172f05a8"><div class="ttname"><a href="namespacecrt.html#a974f0aa0a916ef6ca78dda59172f05a8">crt::COLOR_LIGHT_MAGENTA</a></div><div class="ttdeci">constexpr int COLOR_LIGHT_MAGENTA</div><div class="ttdef"><b>Определения</b> <a href="#l00030">CrtLib.h:30</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a97c0a023fd182b3ece9152936ab9ba31"><div class="ttname"><a href="namespacecrt.html#a97c0a023fd182b3ece9152936ab9ba31">crt::COLOR_MAGENTA</a></div><div class="ttdeci">constexpr int COLOR_MAGENTA</div><div class="ttdef"><b>Определения</b> <a href="#l00022">CrtLib.h:22</a></div></div>
+<div class="ttc" id="anamespacecrt_html_a9aeed09bf314649dc6288af2d5e16205"><div class="ttname"><a href="namespacecrt.html#a9aeed09bf314649dc6288af2d5e16205">crt::SetCursorVisibility</a></div><div class="ttdeci">void SetCursorVisibility(bool visible)</div><div class="ttdoc">Делает курсор видимым или невидимым</div><div class="ttdef"><b>Определения</b> <a href="_crt_lib_8cpp_source.html#l00037">CrtLib.cpp:37</a></div></div>
+<div class="ttc" id="anamespacecrt_html_aa942de6c9433ec3764db1e50095d8cad"><div class="ttname"><a href="namespacecrt.html#aa942de6c9433ec3764db1e50095d8cad">crt::COLOR_LIGHT_RED</a></div><div class="ttdeci">constexpr int COLOR_LIGHT_RED</div><div class="ttdef"><b>Определения</b> <a href="#l00029">CrtLib.h:29</a></div></div>
+<div class="ttc" id="anamespacecrt_html_aa9bafd6a85b290aa5a5da5f8f75dbcbb"><div class="ttname"><a href="namespacecrt.html#aa9bafd6a85b290aa5a5da5f8f75dbcbb">crt::COLOR_CYAN</a></div><div class="ttdeci">constexpr int COLOR_CYAN</div><div class="ttdef"><b>Определения</b> <a href="#l00020">CrtLib.h:20</a></div></div>
+<div class="ttc" id="anamespacecrt_html_ad90ce63173f9f521c494debfbc0ab345"><div class="ttname"><a href="namespacecrt.html#ad90ce63173f9f521c494debfbc0ab345">crt::ShowCursor</a></div><div class="ttdeci">void ShowCursor()</div><div class="ttdoc">Делает курсор видимым</div><div class="ttdef"><b>Определения</b> <a href="_crt_lib_8cpp_source.html#l00050">CrtLib.cpp:50</a></div></div>
+<div class="ttc" id="anamespacecrt_html_aeb6413e792ace826d084d4f24498e154"><div class="ttname"><a href="namespacecrt.html#aeb6413e792ace826d084d4f24498e154">crt::COLOR_BLUE</a></div><div class="ttdeci">constexpr int COLOR_BLUE</div><div class="ttdef"><b>Определения</b> <a href="#l00018">CrtLib.h:18</a></div></div>
+<div class="ttc" id="anamespacecrt_html_af50727c396d4611bca375c1d1b8a9795"><div class="ttname"><a href="namespacecrt.html#af50727c396d4611bca375c1d1b8a9795">crt::COLOR_GRAY</a></div><div class="ttdeci">constexpr int COLOR_GRAY</div><div class="ttdef"><b>Определения</b> <a href="#l00024">CrtLib.h:24</a></div></div>
+<div class="ttc" id="anamespacecrt_html_af5fe6c868c744403bf635b5afb4c91ad"><div class="ttname"><a href="namespacecrt.html#af5fe6c868c744403bf635b5afb4c91ad">crt::SetTextColor</a></div><div class="ttdeci">void SetTextColor(int color)</div><div class="ttdoc">Устанавливает цвет символов текста</div><div class="ttdef"><b>Определения</b> <a href="_crt_lib_8cpp_source.html#l00016">CrtLib.cpp:16</a></div></div>
+<div class="ttc" id="anamespacecrt_html_af6c747cc53b4550e2b50cc68983b9cc2"><div class="ttname"><a href="namespacecrt.html#af6c747cc53b4550e2b50cc68983b9cc2">crt::COLOR_YELLOW</a></div><div class="ttdeci">constexpr int COLOR_YELLOW</div><div class="ttdef"><b>Определения</b> <a href="#l00031">CrtLib.h:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="_crt_lib_8h.html">CrtLib.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

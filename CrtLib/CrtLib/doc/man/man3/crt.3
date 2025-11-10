@@ -1,0 +1,363 @@
+.TH "crt" 3 "CrtLib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+crt \- Все элементы объявлены в пространсве имен crt\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "void \fBGotoXY\fP (int x, int y)"
+.br
+.RI "Функция управления курсором "
+.ti -1c
+.RI "void \fBSetTextColor\fP (int color)"
+.br
+.RI "Устанавливает цвет символов текста "
+.ti -1c
+.RI "void \fBSetTextBackground\fP (int color)"
+.br
+.RI "Устанавливает цвет фона текста "
+.ti -1c
+.RI "void \fBSetCursorVisibility\fP (bool visible)"
+.br
+.RI "Делает курсор видимым или невидимым "
+.ti -1c
+.RI "void \fBHideCursor\fP ()"
+.br
+.RI "Делает курсор невидимым "
+.ti -1c
+.RI "void \fBShowCursor\fP ()"
+.br
+.RI "Делает курсор видимым "
+.in -1c
+.SS "Переменные"
+
+.in +1c
+.ti -1c
+.RI "HANDLE \fBhStdOut\fP = GetStdHandle(STD_OUTPUT_HANDLE)"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_BLACK\fP = 0"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_BLUE\fP = 1"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_GREEN\fP = 2"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_CYAN\fP = 3"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_RED\fP = 4"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_MAGENTA\fP = 5"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_BROWN\fP = 6"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_GRAY\fP = 7"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_DARK_GRAY\fP = 8"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_LIGHT_BLUE\fP = 9"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_LIGHT_GREEN\fP = 10"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_LIGHT_CYAN\fP = 11"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_LIGHT_RED\fP = 12"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_LIGHT_MAGENTA\fP = 13"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_YELLOW\fP = 14"
+.br
+.ti -1c
+.RI "constexpr int \fBCOLOR_WHITE\fP = 15"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+Все элементы объявлены в пространсве имен crt\&. 
+.SH "Функции"
+.PP 
+.SS "void crt::GotoXY (int x, int y)"
+
+.PP
+Функция управления курсором 
+.PP
+.RS 4
+Белый цвет 
+.RE
+.PP
+
+.PP
+Устанавливает курсор в позицию х, у 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIx\fP Координата x позиции курсора 
+.br
+\fIy\fP Координата y позиции курсора 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.cpp\fP строка \fB8\fP
+.SS "void crt::HideCursor ()"
+
+.PP
+Делает курсор невидимым 
+.PP
+\fBСм. также\fP
+.RS 4
+\fBSetCursorVisibility\fP, \fBShowCursor\fP 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.cpp\fP строка \fB45\fP
+.SS "void crt::SetCursorVisibility (bool visible)"
+
+.PP
+Делает курсор видимым или невидимым Очень часто в консольных программах при реализации пользовательского интерфейса бывает необходимым скрывать курсор в некоторых случаях, или показывать его\&. 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIvisible\fP Если true - курсор будет видим, иначе - невидим 
+.RE
+.PP
+\fBСм. также\fP
+.RS 4
+\fBHideCursor\fP, \fBShowCursor\fP 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.cpp\fP строка \fB37\fP
+.SS "void crt::SetTextBackground (int color)"
+
+.PP
+Устанавливает цвет фона текста Устанавливает заданный цвет фона текста, оставляя цвет символов неизменным\&. 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIcolor\fP Цвет фона (см\&. константы цветов) 
+.RE
+.PP
+\fBСм. также\fP
+.RS 4
+\fBSetTextColor\fP 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.cpp\fP строка \fB26\fP
+.SS "void crt::SetTextColor (int color)"
+
+.PP
+Устанавливает цвет символов текста Устанавливает заданный цвет символов текста, оставляя фон неизменным\&. 
+.PP
+\fBАргументы\fP
+.RS 4
+\fIcolor\fP Цвет символов (см\&. константы цветов) 
+.RE
+.PP
+\fBСм. также\fP
+.RS 4
+\fBSetTextBackground\fP 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.cpp\fP строка \fB16\fP
+.SS "void crt::ShowCursor ()"
+
+.PP
+Делает курсор видимым 
+.PP
+\fBСм. также\fP
+.RS 4
+\fBSetCursorVisibility\fP, \fBHideCursor\fP 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.cpp\fP строка \fB50\fP
+.SH "Переменные"
+.PP 
+.SS "int crt::COLOR_BLACK = 0\fR [constexpr]\fP"
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB17\fP
+.SS "int crt::COLOR_BLUE = 1\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Черный цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB18\fP
+.SS "int crt::COLOR_BROWN = 6\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Черный цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB23\fP
+.SS "int crt::COLOR_CYAN = 3\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Зеленый цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB20\fP
+.SS "int crt::COLOR_DARK_GRAY = 8\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Серый цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB25\fP
+.SS "int crt::COLOR_GRAY = 7\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Коричневый цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB24\fP
+.SS "int crt::COLOR_GREEN = 2\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Синий цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB19\fP
+.SS "int crt::COLOR_LIGHT_BLUE = 9\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Темно-серый цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB26\fP
+.SS "int crt::COLOR_LIGHT_CYAN = 11\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Светло-зеленый цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB28\fP
+.SS "int crt::COLOR_LIGHT_GREEN = 10\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Светло-синий цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB27\fP
+.SS "int crt::COLOR_LIGHT_MAGENTA = 13\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Светло-Красный цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB30\fP
+.SS "int crt::COLOR_LIGHT_RED = 12\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Светло-голубой цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB29\fP
+.SS "int crt::COLOR_MAGENTA = 5\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Красный цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB22\fP
+.SS "int crt::COLOR_RED = 4\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Голубой цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB21\fP
+.SS "int crt::COLOR_WHITE = 15\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Желтый цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB32\fP
+.SS "int crt::COLOR_YELLOW = 14\fR [constexpr]\fP"
+
+.PP
+.RS 4
+Светло-Пурпурный цвет 
+.RE
+.PP
+
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP строка \fB31\fP
+.SS "HANDLE crt::hStdOut = GetStdHandle(STD_OUTPUT_HANDLE)"
+
+.PP
+См\&. определение в файле \fBCrtLib\&.cpp\fP строка \fB6\fP
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для CrtLib из исходного текста\&.

@@ -1,0 +1,129 @@
+.TH "CrtLib.h" 3 "CrtLib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CrtLib.h \- Заголовочный файл библиотеки CrtLib\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Пространства имен"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBcrt\fP"
+.br
+.RI "Все элементы объявлены в пространсве имен crt\&. "
+.in -1c
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "void \fBcrt::GotoXY\fP (int x, int y)"
+.br
+.RI "Функция управления курсором "
+.ti -1c
+.RI "void \fBcrt::SetTextColor\fP (int color)"
+.br
+.RI "Устанавливает цвет символов текста "
+.ti -1c
+.RI "void \fBcrt::SetTextBackground\fP (int color)"
+.br
+.RI "Устанавливает цвет фона текста "
+.ti -1c
+.RI "void \fBcrt::SetCursorVisibility\fP (bool visible)"
+.br
+.RI "Делает курсор видимым или невидимым "
+.ti -1c
+.RI "void \fBcrt::HideCursor\fP ()"
+.br
+.RI "Делает курсор невидимым "
+.ti -1c
+.RI "void \fBcrt::ShowCursor\fP ()"
+.br
+.RI "Делает курсор видимым "
+.in -1c
+.SS "Переменные"
+
+.in +1c
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_BLACK\fP = 0"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_BLUE\fP = 1"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_GREEN\fP = 2"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_CYAN\fP = 3"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_RED\fP = 4"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_MAGENTA\fP = 5"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_BROWN\fP = 6"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_GRAY\fP = 7"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_DARK_GRAY\fP = 8"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_LIGHT_BLUE\fP = 9"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_LIGHT_GREEN\fP = 10"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_LIGHT_CYAN\fP = 11"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_LIGHT_RED\fP = 12"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_LIGHT_MAGENTA\fP = 13"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_YELLOW\fP = 14"
+.br
+.ti -1c
+.RI "constexpr int \fBcrt::COLOR_WHITE\fP = 15"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+Заголовочный файл библиотеки CrtLib\&. 
+
+
+.PP
+\fBАвторы\fP
+.RS 4
+Мамрыкин О\&.В\&., к\&.т\&.н\&., доцент, зав\&. каф\&. ИИТ филиала УдГУ в г\&.Воткинске 
+.RE
+.PP
+\fBВерсия\fP
+.RS 4
+2\&.0\&.0 
+.RE
+.PP
+\fBДата\fP
+.RS 4
+01\&.01\&.2025 
+.RE
+.PP
+\fBПредупреждения\fP
+.RS 4
+Библиотека предназначена для работы только с OS Windows
+.RE
+.PP
+Данный файл описывает константы цветов и набор функций для работы с консолью: Изменение цвета символов, управлениие курсором\&. 
+.PP
+См\&. определение в файле \fBCrtLib\&.h\fP
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для CrtLib из исходного текста\&.
