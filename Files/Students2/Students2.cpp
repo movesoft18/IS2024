@@ -10,6 +10,7 @@ struct Student
     string middleName;
     char gender;
     string dateOfBirth;
+    double avgMark;
 };
 
 int peopleCount(const string& fileName)
