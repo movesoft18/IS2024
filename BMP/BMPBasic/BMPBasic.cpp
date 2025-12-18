@@ -71,7 +71,10 @@ int main()
         cout << "Размер: " << bih.biSize << endl;
         cout << "Ширина: " << bih.biWidth << endl;
         cout << "Высота: " << bih.biHeight << endl;
-        cout << "Бит на пиксель: " << bih.biBitCount << endl;
+
+        //biBitCount = 1 - монохромное (2 цвета) 2^1; 4 - 16 цветов 2^4
+        //biBitCount = 8 - 256 цветов 2^8; 24 - 16777216 цветов 2^24
+        cout << "Бит на пиксель: " << bih.biBitCount << endl; 
         cout << "Сжатие: " << bih.biCompression << endl;
         cout << "Размер изображения: " << bih.biSizeImage << endl;
         cout << "Разрешение по х: " << bih.biXPelsPerMeter << endl;
@@ -93,6 +96,8 @@ int main()
                     << (int)palette[i].green << " Синий: "
                     << (int)palette[i].blue << "\n";
             }
+
+
 
             delete[] palette;
         }
