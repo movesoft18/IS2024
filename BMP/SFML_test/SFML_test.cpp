@@ -1,10 +1,14 @@
 ﻿#include <SFML/Graphics.hpp>
+
 using namespace sf; // подключаем пространство имен sf
 
 int main()
 {
 	// Объект, который, собственно, является главным окном приложения
-	RenderWindow window(VideoMode(1024, 768), "Заголовок окна");
+
+	RenderWindow window(VideoMode(1024, 768), "SFML Works!");
+	float x = 100;
+	float y = 100;
 	// Главный цикл приложения: выполняется, пока открыто окно
 	while (window.isOpen())
 	{
@@ -17,22 +21,27 @@ int main()
 				window.close(); // тогда закрываем его
 		}
 		// Установка цвета фона
-		window.clear(Color(0, 0, 0));
+		window.clear(Color(250, 220, 100));
 		// Создаем фигуру - круг радиусом 50
-		CircleShape circle(1.f);
+		CircleShape circle(50.f);
+		CircleShape circle1(100.f);
+		circle1.setFillColor(Color::Red);
+		circle1.setPosition(100, 100);
+		RectangleShape r(Vector2f(150, 120));
+		r.setFillColor(Color::Blue);
+		r.setPosition(35, 120);
 		// Закрашиваем наш круг 
-		for(int i = 0; i < 300; i++)
-			for (int j = 0; j < 300; j++)
-			{
-				circle.setFillColor(Color(
-					rand()%256, 
-					rand() % 256,
-					rand() % 256));
-				circle.setPosition(j, i);
-				window.draw(circle);
-			}
+		x += rand() % 3 - rand() % 3;
+		y += rand() % 3 - rand() % 3;
+		circle.setFillColor(Color(0, 120, 230, 128));
+		circle.setPosition(x, y);
+		// Отрисовка круга
+		window.draw(circle1);
+		window.draw(r);
+		window.draw(circle);
 		// Отрисовка окна
 		window.display();
 	}
 	return 0;
+
 }

@@ -1,0 +1,49 @@
+﻿#include <iostream>
+void BubbleSort(int array[], int count)
+{
+    bool exchange = false; // признак того, что за один проход цикла были найдены элементы
+    // подлежащие обмену
+    int n = count - 1;
+    do
+    {
+        exchange = false; //  в начале цикла полагаем, что обменов не будет
+        for (int i = 0; i < n; i++)  // цикл перебора элементов массива
+        {
+            if (array[i] > array[i + 1]) // если текущий элемент больше следующего
+            {
+                int t = array[i]; // меняем их местами
+                array[i] = array[i + 1];
+                array[i + 1] = t;
+                //std::swap(array[i], array[i + 1]); // или так
+                exchange = true; // обозначаем, что перестановка была - значит, возможно элементы массива еще полностью не отсортированы
+            }
+        }
+        n--;    // в первого прохода самый большой элемент встает на свое место
+        // соответственно в следующий раз его уже проверять не нужно  -
+        // уменьшаем количество проверяемых элементов на 1
+    } while (exchange); // повторяем, если за цикл была хотя бы одно перестановка
+}  // если перестановок не было - то массив отсортирован
+
+void BubbleSortClassic(int array[], int count)
+{
+    for (int i = 0; i < count; i++)
+        for (int j = 0; j < count-1; j++)
+            if (array[j] < array[j + 1]) // если текущий элемент больше следующего
+                std::swap(array[j], array[j + 1]); // или так
+}
+
+int main()
+{
+    int m[]{ 4,11,7,8,4,7,9,4,-5,-34, 0, 45, 211, -65 };
+    int size = sizeof(m) / sizeof(int);
+    BubbleSort(m, size);
+    for (int i = 0; i < size; i++)
+        std::cout << m[i] << ' ';
+    std::cout << std::endl;
+    int m1[]{ 4,11,7,8,4,7,9,4,-5,-34, 0, 45, 211, -65 };
+    int size1 = sizeof(m1) / sizeof(int);
+    BubbleSortClassic(m1, size1);
+    for (int i = 0; i < size1; i++)
+        std::cout << m1[i] << ' ';
+}
+
