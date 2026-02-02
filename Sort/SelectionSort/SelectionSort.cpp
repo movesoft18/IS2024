@@ -30,9 +30,5 @@ int main()
     SelectionSort(m, size);
     for (int i = 0; i < size; i++)
         std::cout << m[i] << ' ';
-    while (int ii = true)
-    {
-        std::cout << ii;
-    }
 }
 
