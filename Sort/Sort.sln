@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuickSort", "QuickSort\Quic
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StdSort", "StdSort\StdSort.vcxproj", "{DDB543D6-AEFC-443B-A202-BB7A6D9DAF57}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PointersSort", "PointersSort\PointersSort.vcxproj", "{13F06B52-16C1-49DF-B98E-F6DA512A6D82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{DDB543D6-AEFC-443B-A202-BB7A6D9DAF57}.Release|x64.Build.0 = Release|x64
 		{DDB543D6-AEFC-443B-A202-BB7A6D9DAF57}.Release|x86.ActiveCfg = Release|Win32
 		{DDB543D6-AEFC-443B-A202-BB7A6D9DAF57}.Release|x86.Build.0 = Release|Win32
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Debug|x64.ActiveCfg = Debug|x64
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Debug|x64.Build.0 = Debug|x64
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Debug|x86.ActiveCfg = Debug|Win32
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Debug|x86.Build.0 = Debug|Win32
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Release|x64.ActiveCfg = Release|x64
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Release|x64.Build.0 = Release|x64
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Release|x86.ActiveCfg = Release|Win32
+		{13F06B52-16C1-49DF-B98E-F6DA512A6D82}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
