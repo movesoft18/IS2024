@@ -16,15 +16,17 @@ int main()
     auto i2 = Delete(first, kiwi); // удаляем киви
     PrintList(first);
     auto bananas2 = AddLast(first, 9, "Бананы", 160, 43);
+    AddLast(first, 15, "Лук репчатый", 10, 233);
     PrintList(first);
     std::cout << "---------------\n";
-    auto result = Find(first, "Бананы");
+    auto item = "Бананы";
+    auto result = Find(first, item);
     if (result == nullptr)
         std::cout << "Товар не найден!\n";
     while (result != nullptr)
     {
         PrintItem(result);
-        result = Find(result->next, "Бананы");
+        result = Find(result->next, item);
     }
     std::cout << "---------------\n";
     auto bananasList = FindAll(first, "Бананы");
