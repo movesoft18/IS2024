@@ -35,7 +35,7 @@ double Compute(const string& str)
             case '/':  //а деление по принципу вычитания )))
                 f = Pop(stack);
                 d = Pop(stack);
-                Push(stack, d / f);
+                Push(stack, d / f); 
                 continue;
             case '^':  //а деление по принципу вычитания )))
                 f = Pop(stack);

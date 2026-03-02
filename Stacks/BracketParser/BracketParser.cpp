@@ -7,7 +7,7 @@ StackItem<char>* stack = nullptr;
 // функция проверяет правильность расстановки скобок () и [] в выражении str
 // возвращает true, если в выражении скобки расставлены корректно и false в противном случае
 
-void ClearStack(StackItem<char>* stack)
+void ClearStack(StackItem<char>*& stack)
 {
     while (!IsEmpty(stack)) Pop(stack);
 }
@@ -65,7 +65,7 @@ int main()
     cout << IsCorrectString("2*(6x+1))-[(4-6)*(3+x)]^2 -(((3-z)-z)*x)") << endl; // неправильное лишняя ) скобка
     cout << IsCorrectString("2*(6x+1)-[(4-6)*(3+x)]^2 -(((3-z)-z)*x]") << endl; // неправильное нарушен порядок скобок, последняя должна быть ), а по факту ]
     cout << IsCorrectString("2*(6x+1)-[(4-6)*(3+x)]^2 -[((3-z)-z)*x)") << endl;  //неправильное нарушен порядок скобок, последняя должна быть ], а по факту )
-    cout << IsCorrectString("((((((((((((((2+3)*6)") << endl;
+    cout << IsCorrectString("(((2+3)*6)") << endl;
     cin.get();
 }
 
