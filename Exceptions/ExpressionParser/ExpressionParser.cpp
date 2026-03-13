@@ -5,6 +5,14 @@ using namespace std;
 
 StackItem<double>* stack = nullptr;
 
+void ClearStack()
+{
+    while (!IsEmpty(stack))
+    {
+        Pop(stack);
+    }
+}
+
 double Compute(const string& str)
 {
     double f, d;
@@ -48,7 +56,17 @@ double Compute(const string& str)
                 f = Pop(stack);
                 Push(stack, sqrt(f));
                 continue;
+            default: 
+                if (e < '0' || e > '9')
+                {
+                    ClearStack();
+                    throw std::invalid_argument(
+                        "Неподдерживаемая операция в выражении " +
+                        str + " '" + part + "'"
+                    );
+                }
             }
+
         }
         size_t error = 0;
         double num = 0;
@@ -58,16 +76,20 @@ double Compute(const string& str)
         }
         catch (std::invalid_argument e)
         {
+            ClearStack();
             throw std::invalid_argument(
-                "Синтаксическая ошибка в выражении '" +
-                str + "'. Неверный элемент " + part
+                "Неверный символ в выражении " +
+                str + " '" + part + "'"
             );
         }
         if (error < part.length())
+        {
+            ClearStack();
             throw std::invalid_argument(
-                "Синтаксическая ошибка в выражении '" +
-                str + "'. Неверный элемент " + part
+                "Неверный символ в выражении "+
+                str + " '" + part + "'"
             );
+        }
         // в число double
         Push(stack,num);   // и помещаем в стек
     }
@@ -79,14 +101,16 @@ int main()
     setlocale(LC_ALL, "");
     try
     {
-        cout << Compute("10 20 + 3 * 2 / 1 -") << endl; // (10+20)*3/2-1 = 44
+        cout << Compute("10 20 + 2 / 1 -") << endl; // (10+20)*3/2-1 = 44
         cout << Compute("7 2 3 * -") << endl; // 7-(2*3) = 1
-        cout << Compute("7 2 ^374 @") << endl;
+        cout << Compute("7 2 ^ 4 @") << endl;
     }
     catch (std::invalid_argument e)
     {
         cout << e.what() << endl;
     }
-
 }
 
+
+
+// 35762 -436 +6743 56.3.6

@@ -10,7 +10,7 @@ int getAge()
         throw std::out_of_range(
             "Возраст должен быть в диапазоне 0..100"
         );
-
+    return age;
 }
 
 int main()
@@ -24,14 +24,14 @@ int main()
         auto x2 = Pop(stack);
         std::cout << x1 << " " << x2 << std::endl;
     }
-    catch (std::out_of_range e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    catch (std::runtime_error e)
-    {
-        std::cout << e.what() <<std::endl;
-    }
+    //catch (std::out_of_range e)
+    //{
+    //    std::cout << e.what() << std::endl;
+    //}
+    //catch (std::runtime_error e)
+    //{
+    //    std::cout << e.what() <<std::endl;
+    //}
     catch (std::exception e)
     {
         std::cout << e.what() << std::endl;
