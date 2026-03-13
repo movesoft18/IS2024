@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36623.8 d17.14
+VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExceptionBase", "ExceptionBase\ExceptionBase.vcxproj", "{348A9B0A-C1F3-4CA6-8D26-023A343565D5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackException", "StackException\StackException.vcxproj", "{DA03876A-2221-4A5C-BDA3-74A21EA8C2B0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyStack", "MyStack\MyStack.vcxproj", "{1DABFAF1-0C4D-4B88-84ED-DCF21B913ED4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExpressionParser", "ExpressionParser\ExpressionParser.vcxproj", "{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{1DABFAF1-0C4D-4B88-84ED-DCF21B913ED4}.Release|x64.Build.0 = Release|x64
 		{1DABFAF1-0C4D-4B88-84ED-DCF21B913ED4}.Release|x86.ActiveCfg = Release|Win32
 		{1DABFAF1-0C4D-4B88-84ED-DCF21B913ED4}.Release|x86.Build.0 = Release|Win32
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Debug|x64.ActiveCfg = Debug|x64
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Debug|x64.Build.0 = Debug|x64
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Debug|x86.ActiveCfg = Debug|Win32
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Debug|x86.Build.0 = Debug|Win32
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Release|x64.ActiveCfg = Release|x64
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Release|x64.Build.0 = Release|x64
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Release|x86.ActiveCfg = Release|Win32
+		{D8DCCDC8-82B6-4EDA-951C-C5E233C59708}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,7 +27,9 @@ double Compute(const string& str)
                 //Push(stack,Pop(stack) + Pop(stack));
                 continue;
             case '-': // если это вычитание, то извлекаем из стека 2 числа, вычитаем их и помещаем результат в стек
-                Push(stack ,-Pop(stack) + Pop(stack)); // поскольку на вершине второй операнд, который нам нужно вычесть, то мы меняем
+                d = Pop(stack);
+                f = Pop(stack);
+                Push(stack ,f - d); // поскольку на вершине второй операнд, который нам нужно вычесть, то мы меняем
                 continue;                         // его знак на противоположный и складываем со следующим элементом на стеке
             case '*':
                 Push(stack,Pop(stack) * Pop(stack)); // умножение - по образу сложения, только операция другая
@@ -48,7 +50,24 @@ double Compute(const string& str)
                 continue;
             }
         }
-        double num = stod(part); // а если длина считанной части строки > 1, то это операнд, преобразовываем его
+        size_t error = 0;
+        double num = 0;
+        try
+        {
+            num = stod(part, &error); // а если длина считанной части строки > 1, то это операнд, преобразовываем его
+        }
+        catch (std::invalid_argument e)
+        {
+            throw std::invalid_argument(
+                "Синтаксическая ошибка в выражении '" +
+                str + "'. Неверный элемент " + part
+            );
+        }
+        if (error < part.length())
+            throw std::invalid_argument(
+                "Синтаксическая ошибка в выражении '" +
+                str + "'. Неверный элемент " + part
+            );
         // в число double
         Push(stack,num);   // и помещаем в стек
     }
@@ -57,8 +76,17 @@ double Compute(const string& str)
 
 int main()
 {
-    cout << Compute("fo10 20 + 3 * 2 / 1 -") << endl; // (10+20)*3/2-1 = 44
-    cout << Compute("7 2 3 * -") << endl; // 7-(2*3) = 1
-    cout << Compute("7 2 ^ @") << endl;
+    setlocale(LC_ALL, "");
+    try
+    {
+        cout << Compute("10 20 + 3 * 2 / 1 -") << endl; // (10+20)*3/2-1 = 44
+        cout << Compute("7 2 3 * -") << endl; // 7-(2*3) = 1
+        cout << Compute("7 2 ^374 @") << endl;
+    }
+    catch (std::invalid_argument e)
+    {
+        cout << e.what() << endl;
+    }
+
 }
 
