@@ -1,0 +1,23 @@
+﻿#include <iostream>
+#include <thread>
+#include <atomic>
+
+using namespace std;
+std::atomic<int> c(0);
+
+
+void Increment() // функция инкремента глобальной переменной, не использующая синхронизацию
+{
+    for (int i = 0; i < 2000000; i++)
+        c.fetch_add(100);
+}
+int main()
+{
+    thread t1(Increment);
+    thread t2(Increment);
+    t1.join();
+    t2.join();
+    cout << "c= " << c << endl; // в результате получаем все что угодно от 2 000 000 до 4 000 000, но не 4 000 000
+
+    cin.get();
+}
