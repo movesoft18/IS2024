@@ -18,8 +18,7 @@ void IncrementSync() // функция инкремента глобальной
     for (int i = 0; i < 2000000; i++)
     {
         mut.lock();
-        for (int j = 0; j < 100; j++)
-            c++;
+        c++;
         mut.unlock();
     }
 
